@@ -74,6 +74,3 @@ function q3(pay, isHome, charm) {
 }
 q3(700, false, '중');
 q3(100, false, '상');
-
-console.log(q3(700, false, '중'))
-console.log(q3(100, false, '상'))
