@@ -59,9 +59,9 @@ Q1([1, 2, 3, '4', '5']);
 
   그리고 타입지정도 엄격하게 해보도록 합시다.
 */
-let 철수쌤 = { subject: 'math' };
-let 영희쌤 = { subject: ['science', 'english'] };
-let 민수쌤 = { subject: ['science', 'art', 'korean'] };
+let teacher1 = { subject: 'math' };
+let teacher2 = { subject: ['science', 'english'] };
+let teacher3 = { subject: ['science', 'art', 'korean'] };
 function Q2(x) {
     if (typeof x.subject === 'string') {
         return x.subject;
@@ -73,5 +73,5 @@ function Q2(x) {
         return `끝`;
     }
 }
-console.log(Q2(철수쌤));
-console.log(Q2(민수쌤));
+console.log(Q2(teacher1));
+console.log(Q2(teacher3));
