@@ -58,7 +58,7 @@ type Member2 = {
   marry: boolean
 }
 
-let kim : Member2 = {
+let kimType : Member2 = {
   name: 'kim',
   age: 20,
   marry: false

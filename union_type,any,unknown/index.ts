@@ -40,7 +40,7 @@ let box :string = nameAny
 // 타입 스크립트는 엄격함에 대해 
 // - 간단한 수학연산도 타입에 맞아야한다.
 
-let age :string | number;
+let AgeType :string | number;
 
 // age + 1
 

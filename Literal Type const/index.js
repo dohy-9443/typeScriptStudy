@@ -17,7 +17,7 @@ function rps(a) {
 }
 rps('가위');
 // Literal type은 const 변수 업글버전임
-const a = 123;
+const ab = 123;
 // a = 'kim'
 var data = {
     name: 'kim'
