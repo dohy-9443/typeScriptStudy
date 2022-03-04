@@ -26,7 +26,7 @@ function func2(x) {
     return x * 2;
 }
 let john = [100, false];
-let kim = {
+let kimType = {
     name: 'kim',
     age: 20,
     marry: false

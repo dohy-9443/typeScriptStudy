@@ -29,7 +29,7 @@ let box = nameAny;
 // 이런 이유이다.
 // 타입 스크립트는 엄격함에 대해 
 // - 간단한 수학연산도 타입에 맞아야한다.
-let age;
+let AgeType;
 // age + 1
 // age + 1이 왜 안되냐면 
 // union type은 새로운 타입을 만드는 것이기 때문에 안된다.
