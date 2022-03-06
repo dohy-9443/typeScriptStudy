@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Reset } from 'styled-reset';
 import './App.css';
 
-function App() {
+let a :string = 'kim';
+
+let box :JSX.Element = <div>qwerty</div>;
+
+let box2 :JSX.IntrinsicElements['div'] = <div>asdfghhj</div>
+
+const App = () => {
+
+  const [ user, setUser ] = useState<string | number>('kim')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Reset />
+      <div>
+        {box}
+        {box2}
+        <h4>{a} 안녕하십니까</h4>
+        <Profile name={'철수'} age={20}></Profile>
+      </div>
+    </>
   );
+};
+
+type ProfileType = {
+  name : string,
+  age : number
+}
+
+function Profile({name, age} :ProfileType) :JSX.Element{
+  return (
+    <DIV>{name}이고, 나이는 {age}입니다.</DIV>
+  )
 }
 
 export default App;
+const DIV = styled.div``;
