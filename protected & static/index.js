@@ -43,3 +43,60 @@ console.log(aa);
 User8.skill = 'ts';
 let bb = new User8();
 console.log(bb);
+// x 속성에 숫자를 더해주는 함수가 필요합니다.
+// class User {
+//   private static x = 10;
+//   public static y = 20;
+// }
+// User.addOne(3) //이렇게 하면 x가 3 더해져야함
+// User.addOne(4) //이렇게 하면 x가 4 더해져야함
+class User9 {
+    static addOne(a) {
+        User9.x = +a;
+    }
+    static print() {
+        console.log(User9.x);
+    }
+}
+User9.x = 10;
+User9.y = 20;
+User9.addOne(3);
+User9.addOne(4);
+User9.print();
+// 이런거 어떻게 만들게요 
+// let 네모 = new Square(30, 30, 'red');
+// 네모.draw()
+// 네모.draw()
+// 네모.draw()
+// 네모.draw()
+// 우선 랜덤 색상코드 만들기
+function getRandomColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+class Square2 {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+    draw() {
+        let a = Math.random(); // 0 ~ 1 사이의 임의의 값
+        let square = `
+      <div 
+        style='
+          position: relative;
+          top: ${a * 400}px;
+          left: ${a * 400}px;
+          width: ${this.width}px;
+          height: ${this.height}px;
+          background: ${this.color};
+        '
+      ></div>
+    `;
+        document.body.insertAdjacentHTML('beforeend', square);
+    }
+}
+for (let i = 0; i < 10; i++) {
+    let m1 = new Square2(30, 30, getRandomColor());
+    m1.draw();
+}
