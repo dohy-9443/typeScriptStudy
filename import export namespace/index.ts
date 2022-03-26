@@ -1,3 +1,4 @@
-import { nameA, ageA } from './a';
+import { nameA, ageA, Name2, Age } from './a';
 
-console.log(ageA);
+let imName :Name2 = 'kim'
+console.log(imName);
